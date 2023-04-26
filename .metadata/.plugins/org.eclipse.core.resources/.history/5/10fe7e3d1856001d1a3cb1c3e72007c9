@@ -1,5 +1,0 @@
-package com.ryben.timesheet.repository;
-
-public class UserDAOImpl {
-
-}
