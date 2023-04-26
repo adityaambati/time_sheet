@@ -1,6 +1,6 @@
-spring.datasource.url=jdbc:postgresql://timesheetdb.cnyqbhgbwj24.us-east-1.rds.amazonaws.com:5654/timesheetdb
-spring.datasource.username=postgres
-spring.datasource.password=postgres
+spring.datasource.url=jdbc:postgresql
+spring.datasource.username=123
+spring.datasource.password=123
 spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgresPlusDialect
 
 spring.jpa.hibernate.ddl-auto=update
