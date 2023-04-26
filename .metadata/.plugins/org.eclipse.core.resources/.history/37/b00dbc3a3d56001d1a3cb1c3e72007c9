@@ -1,0 +1,15 @@
+package com.ryben.timesheet.repository;
+
+import com.ryben.timesheet.model.ResponseDTO;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Override
+	public ResponseDTO getAllEmployee() {
+        ResponseDTO response = new ResponseDTO();
+        final String sql = "SELECT role FROM public.\"User\" where email = ? and password= ?";
+	 	PreparedStatement ps = jdbcTemplate.getDataSource().getConnection().prepareStatement(sql);
+		return null;
+	}
+
+}

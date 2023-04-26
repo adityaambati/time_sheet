@@ -1,0 +1,22 @@
+package com.ryben.timesheet.service;
+
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ryben.timesheet.model.ResponseDTO;
+import com.ryben.timesheet.repository.UserDAOImpl;
+
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserDAOImpl userdaoimpl;
+	
+	@Override
+	public ResponseDTO authUser(String email, String password) throws SQLException {
+		userdaoimpl.authUser(email, password);
+		
+		return null;
+	}
+
+}

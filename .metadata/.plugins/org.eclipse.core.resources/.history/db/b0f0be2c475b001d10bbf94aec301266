@@ -1,0 +1,10 @@
+package com.ryben.timesheet.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class EventsDAO {
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.ryben.timesheet.service;
+
+public class EmployeeServiceImpl {
+
+}

@@ -1,0 +1,19 @@
+package com.ryben.timesheet.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Table
+@Entity(name="User")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class User {
+	
+
+	private String email;
+	private String password;
+	private String role;
+	
+
+}

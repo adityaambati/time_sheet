@@ -1,0 +1,30 @@
+package com.ryben.timesheet.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.ryben.timesheet.model.Events;
+
+@Repository
+public class EventsDAO {
+	
+	@Autowired
+    private JdbcTemplate jdbcTemplate;
+	
+    public void saveEvent(Events event) {
+        final String sql = "INSERT INTO public.\"events\" (event_id,event_name,supervisor_id,location,start_time,end_time,details) VALUES (?,?,?,?,?,?,?)";
+        PreparedStatement ps = jdbcTemplate.getDataSource().getConnection().prepareStatement(sql);
+        ps.setInt(1, event.getEvent_id());
+        ps.setString(2, event.getEvent_name());
+        ps.setInt(3, event.getSupervisor_id());
+        ps.setString(4, event.getLocation());
+        ps.setTimestamp(5, new Timestamp(event.getStart_time().getTime()));
+        ps.setTimestamp(6, new Timestamp(event.getEnd_time().getTime()));
+        ps.setString(7, event.getDetails());
+        ps.executeUpdate();
+        
+    }
+	
+
+}

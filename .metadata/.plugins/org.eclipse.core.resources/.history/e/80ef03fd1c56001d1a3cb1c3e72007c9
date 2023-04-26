@@ -1,0 +1,9 @@
+package com.ryben.timesheet.repository;
+
+import java.sql.SQLException;
+
+public interface UserDAO {
+
+	Boolean authUser(String email, String password) throws SQLException ;
+	
+}

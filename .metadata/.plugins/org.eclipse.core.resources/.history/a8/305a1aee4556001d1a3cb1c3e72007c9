@@ -1,0 +1,11 @@
+package com.ryben.timesheet.repository;
+
+import java.sql.SQLException;
+
+import com.ryben.timesheet.model.ResponseDTO;
+
+public interface EmployeeDAO {
+
+	ResponseDTO getAllEmployee() throws SQLException;
+	ResponseDTO saveEmployee();
+}

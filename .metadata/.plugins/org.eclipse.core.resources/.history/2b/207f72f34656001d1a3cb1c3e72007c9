@@ -1,0 +1,29 @@
+package com.ryben.timesheet.service;
+
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ryben.timesheet.model.ResponseDTO;
+import com.ryben.timesheet.repository.EmployeeDAOImpl;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	private EmployeeDAOImpl employeeDAOImpl;
+	
+	@Override
+	public ResponseDTO getAllEmployees() throws SQLException {
+		
+		return employeeDAOImpl.getAllEmployee();
+	}
+
+	@Override
+	public ResponseDTO saveEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

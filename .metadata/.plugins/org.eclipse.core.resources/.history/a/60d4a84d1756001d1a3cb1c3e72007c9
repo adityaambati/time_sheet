@@ -1,0 +1,25 @@
+package com.ryben.timesheet.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.ryben.timesheet.repository.UserRepository;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@GetMapping("/hello")
+	public String Hello() {
+		return "hello";
+	}
+
+	@PostMapping("/saveUser")
+	public String saveUser() {
+		
+	}
+	
+}

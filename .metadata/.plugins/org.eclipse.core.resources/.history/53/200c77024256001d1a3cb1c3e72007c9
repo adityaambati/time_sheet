@@ -1,0 +1,9 @@
+package com.ryben.timesheet.service;
+
+import com.ryben.timesheet.model.ResponseDTO;
+
+public interface EmployeeService {
+
+	public ResponseDTO getAllEmployees();
+	
+}

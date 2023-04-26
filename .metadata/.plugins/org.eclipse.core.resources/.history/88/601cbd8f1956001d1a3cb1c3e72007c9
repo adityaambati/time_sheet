@@ -1,0 +1,7 @@
+package com.ryben.timesheet.repository;
+
+public interface UserDAO {
+
+	Boolean authUser(String email, String password);
+	
+}

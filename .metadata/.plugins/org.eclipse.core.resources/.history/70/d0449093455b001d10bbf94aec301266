@@ -1,0 +1,21 @@
+package com.ryben.timesheet.model;
+
+import java.sql.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Events {
+	private Integer eventID;
+	private String eventName;
+	private Integer supervisorID;
+	private String location;
+	private Date startTime;
+	private Date endTime;
+	private String Details;
+	
+}
